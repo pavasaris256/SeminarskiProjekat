@@ -7,12 +7,12 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.util.Scanner;
 
-import javax.swing.JDialog;
+//import javax.swing.JDialog;
 import javax.swing.BorderFactory;
 import javax.swing.ButtonGroup;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
-import javax.swing.JDialog;
+//import javax.swing.JDialog;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -27,16 +27,20 @@ public class LaunchPage implements ActionListener{
 	JFrame okvir = new JFrame();
 	
 	JLabel labela = new JLabel("Izaberite jednu od tri igre kako biste poceli sa igrom:");
+	JLabel labela1 = new JLabel("Uvek koristitie velika slova u odgovorima!");
 	
 	JButton dugme1 = new JButton("Asocijacije");
 	JButton dugme2 = new JButton("Ko zna zna");
 	JButton dugme4 = new JButton("Ponudjeno");
-	JButton potvrda = new JButton("Da"); 
+	//JButton potvrda = new JButton("Da"); 
 
 	LaunchPage(){
 			
 		labela.setBounds(120,60,800,40);
 		labela.setFont(new Font(null, Font.PLAIN, 25));
+		
+		labela1.setBounds(120,100,800,40);
+		labela1.setFont(new Font(null, Font.PLAIN, 20));
 		
 		dugme1.setBounds(100,160,200,40);
 		dugme1.setFocusable(false);
@@ -388,10 +392,10 @@ public class LaunchPage implements ActionListener{
 						"Drzava koja se geograrfski nalazi unutar Juznoaficke republike na slovo L je:"
 					   };
 	String[] opcije = {
-							"crvena",
-							"beograd",
+							"CRVENA",
+							"BEOGRAD",
 							"4",
-							"lesoto"
+							"LESOTO"
 						};
 	
 	char pokusaj;
@@ -764,20 +768,20 @@ class AsocijacijeWindow implements ActionListener {
 //PODACI IZ KOLONE ***B***
 		
 		if(e.getSource()==dugmeB1) {
-				dugmeB1.setText("SLAGALICA");
+				dugmeB1.setText("SKUPSTINA");
 		}
 		if(e.getSource()==dugmeB2) {
-				dugmeB2.setText("BILJKE");
+				dugmeB2.setText("SPOLJNA");
 		}
 		if(e.getSource()==dugmeB3) {
-				dugmeB3.setText("PROLECE");
+				dugmeB3.setText("DRZAVNA");
 		}
 		if(e.getSource()==dugmeB4) {
-				dugmeB4.setText("OSOBA");
+				dugmeB4.setText("FAKULTET");
 		}
 			
 		if(e.getSource()==dugmeX){
-			if (nameB.equals("VESNA") || nameB.equals("vesna") ){
+			if (nameB.equals("POLITIKA") || nameB.equals("politika") ){
 					B.setText(nameB.toUpperCase());
 					B.setText(nameB);
 					B.setEditable(false);
@@ -792,20 +796,20 @@ class AsocijacijeWindow implements ActionListener {
 //PODACI IZ KOLONE ***C***
 		
 	if(e.getSource()==dugmeC1) {
-		dugmeC1.setText("PAS");
+		dugmeC1.setText("RADMILOVIC");
 	}
 	if(e.getSource()==dugmeC2) {
-		dugmeC2.setText("MACKA");
+		dugmeC2.setText("KESIC");
 	}
 	if(e.getSource()==dugmeC3) {
-		dugmeC3.setText("CARSTVO");
+		dugmeC3.setText("Z");
 	}
 	if(e.getSource()==dugmeC4) {
-		dugmeC4.setText("SISAR");
+		dugmeC4.setText("MUSKO IME");
 	}
 	
 	if(e.getSource()==dugmeX){
-		if (nameC.equals("ZIVOTINJA") || nameC.equals("zivotinja") ){
+		if (nameC.equals("ZORAN") || nameC.equals("zoran") ){
 			C.setText(nameC.toUpperCase());
 			C.setText(nameC);
 			C.setEditable(false);
@@ -820,20 +824,20 @@ class AsocijacijeWindow implements ActionListener {
 //PODACI IZ KOLONE ***D***
 
 	if(e.getSource()==dugmeD1) {
-		dugmeD1.setText("KULTURA");
+		dugmeD1.setText("NAPAD");
 	}
 	if(e.getSource()==dugmeD2) {
-		dugmeD2.setText("BEKFLES");
+		dugmeD2.setText("FRANC FERDINAND");
 	}
 	if(e.getSource()==dugmeD3) {
-		dugmeD3.setText("LIMAN");
+		dugmeD3.setText("DZON LENON");
 	}
 	if(e.getSource()==dugmeD4) {
-		dugmeD4.setText("BACKA");
+		dugmeD4.setText("LINKOLN");
 	}
 	
 	if(e.getSource()==dugmeX){
-	if (nameD.equals("NOVI SAD") || nameD.equals("novi sad") ){
+	if (nameD.equals("ATENTAT") || nameD.equals("atentat") ){
 			D.setText(nameD.toUpperCase());
 			D.setText(nameD);
 			D.setEditable(false);
@@ -847,7 +851,7 @@ class AsocijacijeWindow implements ActionListener {
 	}
 	//PODACI IZ POLJA ***KONACNO***
 	if(e.getSource()==dugmeX){
-	if (nameK.equals("NE ZNAM") || nameK.equals("ne znam") ){
+	if (nameK.equals("DJINDJIC") || nameK.equals("djindjic") ){
 		    K.setText(nameK.toUpperCase());
 			K.setText(nameK);
 			K.setEditable(false);
